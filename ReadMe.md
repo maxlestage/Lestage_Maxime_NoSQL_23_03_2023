@@ -50,7 +50,7 @@ Il est possible de se connecter ou de s'inscrire en envoyant une requête POST �
 
 > POST /api/auth/signup : Créer un compte utilisateur
 
-`0.0.0.0:3000/api/auth/signup`
+`http://0.0.0.0:3000/api/auth/signup`
 
 ```json
 
@@ -61,7 +61,7 @@ Il est possible de se connecter ou de s'inscrire en envoyant une requête POST �
 
 > POST /api/auth/login : Se connecter en tant qu'utilisateur
 
-`0.0.0.0:3000/api/auth/login`
+`http://0.0.0.0:3000/api/auth/login`
 
 ```json
 
@@ -85,7 +85,11 @@ Les routes suivantes sont disponibles pour effectuer des opérations sur les sau
 
 > GET /api/sauces : Récupérer la liste des sauces
 
+`http://0.0.0.0:3000/api/sauces`
+
 > GET /api/sauces/:id : Récupérer une sauce par son ID
+
+`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a`
 
 > POST /api/sauces : Ajouter une nouvelle sauce (nécessite d'être authentifié)
 
@@ -111,15 +115,35 @@ Les routes suivantes sont disponibles pour effectuer des opérations sur les sau
 
 > DELETE /api/sauces/:id : Supprimer une sauce existante (nécessite d'être authentifié et d'être le créateur de la sauce)
 
+`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a`
+
 > POST /api/sauces/:id/like : Ajouter ou retirer un like/dislike à une sauce existante (nécessite d'être authentifié)
+
+`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/like`
+
+```json
+
+    "like" : 1
+
+```
 
 ### Opérations sur les commentaires:
 
 Les routes suivantes sont disponibles pour effectuer des opérations sur les commentaires :
 
-> POST /api/sauces/:id/comments : Ajouter un commentaire à une sauce existante (nécessite d'être authentifié)
+> POST /api/sauces/:id/comment : Ajouter un commentaire à une sauce existante (nécessite d'être authentifié)
 
-> DELETE /api/sauces/:id/comments : Supprimer un commentaire existant (nécessite d'être authentifié et d'être l'auteur du commentaire)
+`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/comment`
+
+```json
+
+    "comment" : "J'ai aussi trop aimé cette sauce!"
+
+```
+
+> DELETE /api/sauces/:id/comment : Supprimer un commentaire existant (nécessite d'être authentifié et d'être l'auteur du commentaire)
+
+`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/comment`
 
 ---
 
