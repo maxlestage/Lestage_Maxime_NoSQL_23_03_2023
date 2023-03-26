@@ -75,6 +75,7 @@ Lors de la connection le token sera renvoyé dans la réponse, il faudra alors m
 
 ```js
 // Exemple de réponse :
+
 {
 	"userId": "64205f6f3d87a6ff83d88385",
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwNWY2ZjNkODdhNmZmODNkODgzODUiLCJpYXQiOjE2Nzk4NDMzMDksImV4cCI6MTY3OTkyOTcwOX0.jHGsLjQq8m6ZWccUxQVaBlBeEPw8kSerDj05x1TJ7p8"
