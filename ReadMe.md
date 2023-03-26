@@ -21,7 +21,7 @@ git clone https://github.com/maxlestage/Lestage_Maxime_NoSQL_23_03_2023.git
 - Se déplacer dans le dossier :
 
 ```shell
-cd Lestage_Maxime_NoSQL_23_03_2023`
+cd Lestage_Maxime_NoSQL_23_03_2023
 ```
 
 - Installer les dépendances :
