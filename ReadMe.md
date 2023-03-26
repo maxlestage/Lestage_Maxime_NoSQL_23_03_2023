@@ -65,7 +65,7 @@ Il est possible de se connecter ou de s'inscrire en envoyant une requÃªte POST Ã
 // http://0.0.0.0:3000/api/auth/login
 
 {
-    "mail": "test@mail.com",
+	"mail": "test@mail.com",
 	"password": "test"
 }
 
