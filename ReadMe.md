@@ -68,8 +68,9 @@ Les routes suivantes sont disponibles pour effectuer des opérations sur les sau
 
 Les routes suivantes sont disponibles pour effectuer des opérations sur les commentaires :
 
-- POST /api/sauces/:id/comments : Ajouter un commentaire à une sauce existante (nécessite d'être authentifié)
-- DELETE /api/sauces/:id/comments : Supprimer un commentaire existant (nécessite d'être authentifié et d'être l'auteur du commentaire)
+> POST /api/sauces/:id/comments : Ajouter un commentaire à une sauce existante (nécessite d'être authentifié)
+
+> DELETE /api/sauces/:id/comments : Supprimer un commentaire existant (nécessite d'être authentifié et d'être l'auteur du commentaire)
 
 ---
 
