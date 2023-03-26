@@ -3,11 +3,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-// exports.getId = (req, res, next) => {
-// 	let getId = req.params.id;
-// 	res.status(200).json(getId);
-// };
-
 // Fonction pour créer un utilisateur avec un mot de passe chiffré|Hashé à l'aide de bcrypt.
 exports.signup = (req, res, next) => {
 	bcrypt

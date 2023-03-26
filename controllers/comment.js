@@ -1,5 +1,6 @@
 const Sauce = require("../models/Sauce");
 
+// Fonction qui permet à un utilisateur d'ajouter un commentaire.
 exports.userComment = (req, res) => {
 	Sauce.findById(req.params.id).then((sauce) => {
 		if (!sauce) {
@@ -24,6 +25,7 @@ exports.userComment = (req, res) => {
 	});
 };
 
+// Fonction qui permet à un utilisateur de supprimer son commentaire.
 exports.deleteComment = (req, res) => {
 	Sauce.findById(req.params.id).then((sauce) => {
 		if (!sauce) {

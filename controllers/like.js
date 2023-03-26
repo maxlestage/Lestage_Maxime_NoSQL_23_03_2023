@@ -1,5 +1,34 @@
 const Sauce = require("../models/Sauce");
 
+/* 
+- récupérer la sauce qui m'intéresse
+
+- si l'utilisateur a liké (1)
+	- vérifier s'il est déjà dans la liste des usersLike
+	- si non, l'y ajouter et faire +1 à likes
+	- si oui, ne rien faire
+	- vérifier s'il est déjà dans la liste des usersDislike
+	- si oui, l'y retirer et faire -1 à dislikes
+	- si non, ne rien faire
+
+- si l'utilisateur a dislike (-1)
+	- vérifier s'il est déjà dans la liste des usersDislike
+	- si non, l'y ajouter et faire +1 à dislikes
+	- si oui, ne rien faire
+	- vérifier s'il est déjà dans la liste des usersLike
+	- si oui, l'y retirer et faire -1 à likes
+	- si non, ne rien faire
+
+- si l'utilisateur a annulé (0)
+	- vérifier s'il est déjà dans la liste des usersLike
+	- si oui, l'y retirer et faire -1 à likes
+	- vérifier s'il est déjà dans la liste des usersDislike
+	- si oui, l'y retirer et faire -1 à dislikes
+
+- sauvegarder la sauce
+
+*/
+
 exports.userLikeOrDislikeSauce = (req, res) => {
 	Sauce.findById(req.params.id).then((sauce) => {
 		if (req.body.like === 1) {
@@ -51,32 +80,3 @@ exports.userLikeOrDislikeSauce = (req, res) => {
 		}
 	});
 };
-
-/* 
-- récupérer la sauce qui m'intéresse
-
-- si l'utilisateur a liké (1)
-	- vérifier s'il est déjà dans la liste des usersLike
-	- si non, l'y ajouter et faire +1 à likes
-	- si oui, ne rien faire
-	- vérifier s'il est déjà dans la liste des usersDislike
-	- si oui, l'y retirer et faire -1 à dislikes
-	- si non, ne rien faire
-
-- si l'utilisateur a dislike (-1)
-	- vérifier s'il est déjà dans la liste des usersDislike
-	- si non, l'y ajouter et faire +1 à dislikes
-	- si oui, ne rien faire
-	- vérifier s'il est déjà dans la liste des usersLike
-	- si oui, l'y retirer et faire -1 à likes
-	- si non, ne rien faire
-
-- si l'utilisateur a annulé (0)
-	- vérifier s'il est déjà dans la liste des usersLike
-	- si oui, l'y retirer et faire -1 à likes
-	- vérifier s'il est déjà dans la liste des usersDislike
-	- si oui, l'y retirer et faire -1 à dislikes
-
-- sauvegarder la sauce
-
-*/

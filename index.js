@@ -1,6 +1,4 @@
 // init express server
-const http = require("http");
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -9,8 +7,9 @@ const config = require("./db/config");
 
 // init routes
 const userRoutes = require("./routes/userRoutes");
-const commonRoutes = require("./routes/commonRoutes");
 const sauceRoutes = require("./routes/sauceRoutes");
+
+// Middleware Auth
 const auth = require("./middlewares/auth");
 
 app.use(cors());
