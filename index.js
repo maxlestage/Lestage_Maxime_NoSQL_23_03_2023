@@ -12,7 +12,6 @@ const sauceRoutes = require("./routes/sauceRoutes");
 const auth = require("./middlewares/auth");
 
 app.use(cors());
-
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
