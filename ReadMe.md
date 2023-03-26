@@ -35,7 +35,7 @@ npm install
 - Lancer le serveur :
 
 ```shell
-npm start
+npm run start
 ```
 
 ---
@@ -76,12 +76,14 @@ Les routes suivantes sont disponibles pour effectuer des opérations sur les com
 
 ## Technologies utilisées:
 
-- Node.js
-- Express
-- MongoDB
-- Mongoose
-- JWT
-- bcrypt
+```json
+	"bcrypt": "^5.1.0",
+	"cors": "^2.8.5",
+	"dotenv": "^16.0.3",
+	"express": "^4.18.2",
+	"jsonwebtoken": "^9.0.0",
+	"mongoose": "^7.0.2"
+```
 
 ---
 
