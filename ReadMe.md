@@ -50,9 +50,7 @@ Il est possible de se connecter ou de s'inscrire en envoyant une requÃªte POST Ã
 
 > POST /api/auth/signup : CrÃ©er un compte utilisateur
 
-```http
-0.0.0.0:3000/api/auth/signup
-```
+`0.0.0.0:3000/api/auth/signup`
 
 ```json
 
@@ -63,9 +61,7 @@ Il est possible de se connecter ou de s'inscrire en envoyant une requÃªte POST Ã
 
 > POST /api/auth/login : Se connecter en tant qu'utilisateur
 
-```http
-0.0.0.0:3000/api/auth/login
-```
+`0.0.0.0:3000/api/auth/login`
 
 ```json
 
