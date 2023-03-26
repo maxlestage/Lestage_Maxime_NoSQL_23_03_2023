@@ -46,7 +46,13 @@ npm run start
 
 L'authentification se fait grâce à un token JWT.
 
-Il est possible de se connecter ou de s'inscrire en envoyant une requête POST à l'URL /api/auth/signup ou /api/auth/login. Le token sera renvoyé dans la réponse de ces requêtes.
+Il est possible de se connecter ou de s'inscrire en envoyant une requête POST à l'URL
+
+> POST /api/auth/signup : Créer un compte utilisateur
+
+> POST /api/auth/login : Se connecter en tant qu'utilisateur
+
+Le token sera renvoyé dans la réponse de la connexion.
 
 ### Opérations sur les sauces:
 
