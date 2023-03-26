@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // app.use(routes);
 app.use("/api/auth", userRoutes);
+
 // app.use("/", auth, commonRoutes);
 app.use("/api/sauces", auth, sauceRoutes);
 
