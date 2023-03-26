@@ -32,6 +32,11 @@ npm install
 
 - Configurer le fichier .env en y ajoutant les informations nécessaires à la connexion à une base de données MongoDB
 
+```ruby
+DB_CONNECTION="mongodb://127.0.0.1:27017/heinz" # créer une db heinz si elle n'existe pas.
+SECRET_TOKEN="RANDOM_TOKEN_SECRET_⏣_⚡︎_⍿" # Token utiliser lors du jwt
+```
+
 - Lancer le serveur :
 
 ```shell
