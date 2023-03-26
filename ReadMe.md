@@ -136,9 +136,9 @@ http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/like
 ```
 
 ```js
-  {
+{
     "like" : 1
-  }
+}
 ```
 
 ### Opérations sur les commentaires:
