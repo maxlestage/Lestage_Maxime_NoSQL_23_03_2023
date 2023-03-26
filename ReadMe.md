@@ -71,7 +71,7 @@ Il est possible de se connecter ou de s'inscrire en envoyant une requête POST �
 
 ```
 
-Lors de la connection le token sera renvoyé dans la réponse, il faudra alors manuellement venir copier le token et venir le coller dans "Bearer Token" afin de rendre accessible les routes : /api/sauces.
+Lors de la connexion le token sera renvoyé dans la réponse, il faudra alors manuellement venir copier le token et venir le coller dans "Bearer Token" afin de rendre accessible les routes : /api/sauces.
 
 ```js
 // Exemple de réponse :
