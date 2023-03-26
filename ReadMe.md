@@ -55,10 +55,10 @@ Il est possible de se connecter ou de s'inscrire en envoyant une requête POST �
 ```
 
 ```json
-{
+
 	"mail": "test@mail.com",
 	"password": "test"
-}
+
 ```
 
 > POST /api/auth/login : Se connecter en tant qu'utilisateur
@@ -68,20 +68,19 @@ Il est possible de se connecter ou de s'inscrire en envoyant une requête POST �
 ```
 
 ```json
-{
+
 	"mail": "test@mail.com",
 	"password": "test"
-}
+
 ```
 
 Lors de la connection le token sera renvoyé dans la réponse, il faudra alors manuellement venir copier le token et venir le coller dans "Bearer Token" afin de rendre accessible les routes : /api/sauces.
 
 ```json
 // Exemple de réponse :
-{
+
 	"userId": "64205f6f3d87a6ff83d88385",
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwNWY2ZjNkODdhNmZmODNkODgzODUiLCJpYXQiOjE2Nzk4NDMzMDksImV4cCI6MTY3OTkyOTcwOX0.jHGsLjQq8m6ZWccUxQVaBlBeEPw8kSerDj05x1TJ7p8"
-}
 ```
 
 ### Opérations sur les sauces:
@@ -95,23 +94,23 @@ Les routes suivantes sont disponibles pour effectuer des opérations sur les sau
 > POST /api/sauces : Ajouter une nouvelle sauce (nécessite d'être authentifié)
 
 ```json
-{
+
 	"name": "Catpuh", // chaîne de caractères, obligatoire
 	"avis": "Drôlement bon cette tomate à l'ancienne", // chaîne de caractères, obligatoire
 	"mainPepper": "Tomato Chili", // chaîne de caractères, obligatoire
 	"heat": 3 // nombre, compris entre 1 et 10, obligatoire
-}
+
 ```
 
 > PUT /api/sauces/:id : Modifier une sauce existante (nécessite d'être authentifié et d'être le créateur de la sauce)
 
 ```json
-{
+
 	"name": "Ketchup", // chaîne de caractères
 	"avis": "Nouvelle génération de sauce tomate", // chaîne de caractères
 	"mainPepper": "Tomato Chili", // chaîne de caractères
 	"heat": 3 // nombre, compris entre 1 et 10
-}
+
 ```
 
 > DELETE /api/sauces/:id : Supprimer une sauce existante (nécessite d'être authentifié et d'être le créateur de la sauce)
