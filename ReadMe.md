@@ -50,33 +50,35 @@ Il est possible de se connecter ou de s'inscrire en envoyant une requête POST �
 
 > POST /api/auth/signup : Créer un compte utilisateur
 
-`http://0.0.0.0:3000/api/auth/signup`
+```js
+// http://0.0.0.0:3000/api/auth/signup
 
-```json
-
+{
 	"mail": "test@mail.com",
 	"password": "test"
-
+}
 ```
 
 > POST /api/auth/login : Se connecter en tant qu'utilisateur
 
-`http://0.0.0.0:3000/api/auth/login`
+```js
+// http://0.0.0.0:3000/api/auth/login
 
-```json
-
-	"mail": "test@mail.com",
+{
+    "mail": "test@mail.com",
 	"password": "test"
+}
 
 ```
 
 Lors de la connection le token sera renvoyé dans la réponse, il faudra alors manuellement venir copier le token et venir le coller dans "Bearer Token" afin de rendre accessible les routes : /api/sauces.
 
-```json
+```js
 // Exemple de réponse :
-
+{
 	"userId": "64205f6f3d87a6ff83d88385",
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwNWY2ZjNkODdhNmZmODNkODgzODUiLCJpYXQiOjE2Nzk4NDMzMDksImV4cCI6MTY3OTkyOTcwOX0.jHGsLjQq8m6ZWccUxQVaBlBeEPw8kSerDj05x1TJ7p8"
+}
 ```
 
 ### Opérations sur les sauces:
@@ -85,46 +87,58 @@ Les routes suivantes sont disponibles pour effectuer des opérations sur les sau
 
 > GET /api/sauces : Récupérer la liste des sauces
 
-`http://0.0.0.0:3000/api/sauces`
+```txt
+http://0.0.0.0:3000/api/sauces
+```
 
 > GET /api/sauces/:id : Récupérer une sauce par son ID
 
-`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a`
+```txt
+http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a
+```
 
 > POST /api/sauces : Ajouter une nouvelle sauce (nécessite d'être authentifié)
 
-```json
+```js
+// http://0.0.0.0:3000/api/sauces
 
+{
 	"name": "Catpuh", // chaîne de caractères, obligatoire
 	"avis": "Drôlement bon cette tomate à l'ancienne", // chaîne de caractères, obligatoire
 	"mainPepper": "Tomato Chili", // chaîne de caractères, obligatoire
 	"heat": 3 // nombre, compris entre 1 et 10, obligatoire
-
+}
 ```
 
 > PUT /api/sauces/:id : Modifier une sauce existante (nécessite d'être authentifié et d'être le créateur de la sauce)
 
-```json
+```js
+// http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a
 
+{
 	"name": "Ketchup", // chaîne de caractères
 	"avis": "Nouvelle génération de sauce tomate", // chaîne de caractères
 	"mainPepper": "Tomato Chili", // chaîne de caractères
 	"heat": 3 // nombre, compris entre 1 et 10
-
+}
 ```
 
 > DELETE /api/sauces/:id : Supprimer une sauce existante (nécessite d'être authentifié et d'être le créateur de la sauce)
 
-`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a`
+```txt
+http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a
+```
 
 > POST /api/sauces/:id/like : Ajouter ou retirer un like/dislike à une sauce existante (nécessite d'être authentifié)
 
-`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/like`
+```txt
+http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/like
+```
 
-```json
-
+```js
+  {
     "like" : 1
-
+  }
 ```
 
 ### Opérations sur les commentaires:
@@ -133,23 +147,25 @@ Les routes suivantes sont disponibles pour effectuer des opérations sur les com
 
 > POST /api/sauces/:id/comment : Ajouter un commentaire à une sauce existante (nécessite d'être authentifié)
 
-`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/comment`
+```js
+// http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/comment
 
-```json
-
-    "comment" : "J'ai aussi trop aimé cette sauce!"
-
+{
+	"comment": "J'ai aussi trop aimé cette sauce!"
+}
 ```
 
 > DELETE /api/sauces/:id/comment : Supprimer un commentaire existant (nécessite d'être authentifié et d'être l'auteur du commentaire)
 
-`http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/comment`
+```txt
+http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/comment
+```
 
 ---
 
 ## Technologies utilisées:
 
-```json
+```js
 	"bcrypt": "^5.1.0",
 	"cors": "^2.8.5",
 	"dotenv": "^16.0.3",
