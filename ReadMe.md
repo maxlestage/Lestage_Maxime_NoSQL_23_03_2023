@@ -45,6 +45,8 @@ npm run start
 
 ---
 
+![Heinz2](https://github.com/maxlestage/Lestage_Maxime_NoSQL_23_03_2023/blob/master/img/IMG_0763.JPG?raw=true)
+
 ## Utilisation
 
 ### Authentification:
@@ -86,6 +88,8 @@ Lors de la connexion le token sera renvoyé dans la réponse, il faudra alors ma
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwNWY2ZjNkODdhNmZmODNkODgzODUiLCJpYXQiOjE2Nzk4NDMzMDksImV4cCI6MTY3OTkyOTcwOX0.jHGsLjQq8m6ZWccUxQVaBlBeEPw8kSerDj05x1TJ7p8"
 }
 ```
+
+![Heinz3](https://github.com/maxlestage/Lestage_Maxime_NoSQL_23_03_2023/blob/master/img/IMG_0764.JPG?raw=true)
 
 ### Opérations sur les sauces:
 
@@ -168,6 +172,8 @@ http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/comment
 ```
 
 ---
+
+![Heinz4](https://github.com/maxlestage/Lestage_Maxime_NoSQL_23_03_2023/blob/master/img/IMG_0765.JPG?raw=true)
 
 ## Technologies utilisées:
 
