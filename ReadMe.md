@@ -14,19 +14,19 @@ Alors, n'hésitez pas à vous lancer et à donner votre avis sur les sauces Hein
 
 - Cloner le repository :
 
-```shell
+```bash
 git clone https://github.com/maxlestage/Lestage_Maxime_NoSQL_23_03_2023.git
 ```
 
 - Se déplacer dans le dossier :
 
-```shell
+```bash
 cd Lestage_Maxime_NoSQL_23_03_2023
 ```
 
 - Installer les dépendances :
 
-```shell
+```bash
 npm install
 ```
 
@@ -147,7 +147,7 @@ http://0.0.0.0:3000/api/sauces/642062173d87a6ff83d8838a/like
 
 ```js
 {
-    "like" : 1
+    "like" : 1 // 1 = +1 Like, -1 = -1 Like , 0 = Choix neutre
 }
 ```
 
